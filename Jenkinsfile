@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage("build"){
       steps {
-        sh mvn clean install
+        echo 'building the app'
       }
     }
     
     stage("test"){
         steps {
-        sh mvn test
+        echo 'testing the app'
       }
     }
     
     stage("deploy"){
         steps {
-        sh mvn deploy
+        echo 'deploying the app'
       }
     }
   }
